@@ -23,22 +23,22 @@ function playRound(playerSelection, computerSelection) {
         return (`You lose ${computerSelection} beat ${playerSelection}`);
     }
 }
-function game() {
-    let numberOfRounds = 0;
-    let playerWins = 0;
-    let computerWins = 0;
-    while (numberOfRounds < 5) {
-        const playerSelection = playerChoice();
-        const computerSelection = getComputerChoice();
-        const roundResult = playRound(playerSelection, computerSelection);
-        if (roundResult.includes('win')) {
-            playerWins++
-        } else if (roundResult.includes('lose')) {
-            computerWins++
-        }
-        console.log(roundResult)
-        numberOfRounds++;
-    }
-    console.log(`Final Score - Player: ${playerWins}, Computer: ${computerWins}`);
-}
-game();
+// function game() {
+//     let numberOfRounds = 0;
+//     let playerWins = 0;
+//     let computerWins = 0;
+//     while (numberOfRounds < 5) {
+//         const playerSelection = playerChoice();
+//         const computerSelection = getComputerChoice();
+//         const roundResult = playRound(playerSelection, computerSelection);
+//         if (roundResult.includes('win')) {
+//             playerWins++
+//         } else if (roundResult.includes('lose')) {
+//             computerWins++
+//         }
+//         console.log(roundResult)
+//         numberOfRounds++;
+//     }
+//     console.log(`Final Score - Player: ${playerWins}, Computer: ${computerWins}`);
+// }
+// game();
