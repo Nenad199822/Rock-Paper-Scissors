@@ -5,31 +5,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.cdnfonts.com/css/school-mania-2" rel="stylesheet">
     <title>Rock Paper Scissors</title>
 </head>
 
 <body>
     <h1>Rock Paper Scissors</h1>
-    <div>
-        <h3>Player</h3>
+    <div id="player-computer">
+        <div id="player-container">
+            <div>
+                <h3>Player</h3>
+            </div>
+            <div id="buttons">
+                <div id="player-buttons">
+                    <button id=rock>Rock <img src="./images/pngwing.com.png" alt="Draw-Rock" /></button>
+                    <button id="paper">Paper <img src="./images/paper.png" alt="Paper-Draw"></button>
+                    <button id="scissors">Scissors <img src="./images/scissors.png" alt="Scissors-Draw"></button>
+                </div>
+            </div>
+        </div>
+        <div id="computer-container">
+            <div>
+                <h3>Computer</h3>
+            </div>
+            <div id="computer-buttons">
+                <button id=computer-rock>Rock <img src="./images/pngwing.com.png" alt="Draw-Rock" /></button>
+                <button id="computer-paper">Paper <img src="./images/paper.png" alt="Paper-Draw"></button>
+                <button id="computer scissors">Scissors <img src="./images/scissors.png" alt="Scissors-Draw"></button>
+            </div>
+        </div>
     </div>
-    <div id="buttons">
-        <div id="player-buttons">
-            <button id=rock>Rock <img src="./images/pngwing.com.png" alt="Draw-Rock" /></button>
-            <button id="paper">Paper <img src="./images/paper.png" alt="Paper-Draw"></button>
-            <button id="scissors">Scissors <img src="./images/scissors.png" alt="Scissors-Draw"></button>
 
-        </div>
-        <div>
-            <h3>Computer</h3>
-        </div>
-        <div id="computer-buttons">
-            <button id=computer-rock>Rock <img src="./images/pngwing.com.png" alt="Draw-Rock" /></button>
-            <button id="computer-paper">Paper <img src="./images/paper.png" alt="Paper-Draw"></button>
-            <button id="computer scissors">Scissors <img src="./images/scissors.png" alt="Scissors-Draw"></button>
 
-        </div>
-    </div>
+
     <script src="javascript.js"></script>
 
 </body>

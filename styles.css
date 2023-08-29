@@ -1,3 +1,10 @@
+body {
+    display: flex;
+    flex-direction: column;
+    background: radial-gradient(circle, rgba(224, 115, 115, 0.6) 23%, rgba(227, 141, 21, 0.6) 85%);
+
+}
+
 img {
     width: 100px;
     height: auto;
@@ -8,4 +15,21 @@ button {
     outline: none;
     background: none;
     font-size: 0;
+}
+
+#player-computer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 50px;
+}
+
+h1 {
+    display: flex;
+    justify-content: center;
+    font-family: 'School Mania', sans-serif;
+    font-size: 100px;
+    background: linear-gradient(to right, #f3365f 20%, #19a8eb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
