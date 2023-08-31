@@ -47,14 +47,14 @@ function game() {
     computerScore.textContent = computerWins
 
     if (playerWins === 5) {
-        finalWinner.textContent = (` Player Win : ${playerWins}, Computer: ${computerWins}`)
+        finalWinner.textContent = (`You Win : Player: ${playerWins}, Computer: ${computerWins}`)
         roundWinner.remove();
 
     } else if (computerWins === 5) {
-        finalWinner.textContent = (`Computer Win: ${computerWins}, Player: ${playerWins}`)
+        finalWinner.textContent = (`You Lose : Computer: ${computerWins}, Player: ${playerWins}`)
         roundWinner.remove();
-
     };
+    return
 };
 let roundWinner = document.getElementById('r-w')
 let winner = document.querySelector('#winner-of-round');
