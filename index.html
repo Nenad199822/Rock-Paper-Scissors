@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
     <link href="https://fonts.cdnfonts.com/css/school-mania-2" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/crossed-out" rel="stylesheet">
     <title>Rock Paper Scissors</title>
 </head>
 
@@ -14,7 +15,7 @@
     <div id="player-computer">
         <div id="player-container">
             <div>
-                <h3>Player</h3>
+                <h3 id="player">Player</h3>
             </div>
             <div id="buttons">
                 <div class="player-buttons">
@@ -30,7 +31,7 @@
         <button id="play">Run!</button>
         <div id="computer-container">
             <div>
-                <h3>Computer</h3>
+                <h3 id="computer">Computer</h3>
             </div>
             <div id="computer-buttons">
                 <button id=computer-rock>Rock <img src="./images/pngwing.com.png" alt="Draw-Rock" /></button>
@@ -39,6 +40,14 @@
             </div>
         </div>
     </div>
+    <div class="rounds-winner">
+        <h2>Round Winner:
+            <div id="winner-of-round"></div>
+        </h2>
+    </div>
+    <div id="game-winner"></div>
+
+
 
 
 

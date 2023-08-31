@@ -6,7 +6,6 @@ function getComputerChoice() {
 // Create three buttons, one for each selection. Add an event listener to the buttons that call your playRound function with the correct playerSelection every
 // time a button is clicked. (you can keep the console.logs for this step)
 let playerSelection
-let numberOfRounds = 0;
 let playerWins = 0;
 let computerWins = 0;
 const buttons = document.getElementsByClassName('player-button');
@@ -43,12 +42,16 @@ function game() {
     } else if (roundResult.includes('lose')) {
         computerWins++
     }
-    console.log(roundResult)
-    numberOfRounds++;
+    content.textContent = (roundResult)
     if (playerWins === 5 || computerWins === 5) {
         console.log(`Final Score - Player: ${playerWins}, Computer: ${computerWins}`);
     }
 }
+let winner = document.querySelector('#winner-of-round');
+const content = document.createElement('h3');
+content.classList.add('winner');
+winner.appendChild(content)
+
 
 
 
