@@ -17,8 +17,12 @@ Array.from(buttons).forEach(button => {
     });
 });
 document.getElementById('play').addEventListener('click', (e) => {
-    game()
-})
+    if ((playerWins === 5) || (computerWins === 5)) {
+        console.log('nothing');
+    } else {
+        game();
+    }
+});
 
 function playRound(playerSelection, computerSelection) {
 
@@ -49,12 +53,12 @@ function game() {
     if (playerWins === 5) {
         finalWinner.textContent = (`You Win : Player: ${playerWins}, Computer: ${computerWins}`)
         roundWinner.remove();
+        stop
 
     } else if (computerWins === 5) {
         finalWinner.textContent = (`You Lose : Computer: ${computerWins}, Player: ${playerWins}`)
         roundWinner.remove();
     };
-    return
 };
 let roundWinner = document.getElementById('r-w')
 let winner = document.querySelector('#winner-of-round');
