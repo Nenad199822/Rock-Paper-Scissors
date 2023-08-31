@@ -43,14 +43,38 @@ function game() {
         computerWins++
     }
     content.textContent = (roundResult)
-    if (playerWins === 5 || computerWins === 5) {
-        console.log(`Final Score - Player: ${playerWins}, Computer: ${computerWins}`);
-    }
-}
+    playerScore.textContent = playerWins
+    computerScore.textContent = computerWins
+
+    if (playerWins === 5) {
+        finalWinner.textContent = (` Player Win : ${playerWins}, Computer: ${computerWins}`)
+        roundWinner.remove();
+
+    } else if (computerWins === 5) {
+        finalWinner.textContent = (`Computer Win: ${computerWins}, Player: ${playerWins}`)
+        roundWinner.remove();
+
+    };
+};
+let roundWinner = document.getElementById('r-w')
 let winner = document.querySelector('#winner-of-round');
 const content = document.createElement('h3');
 content.classList.add('winner');
 winner.appendChild(content)
+const score = document.querySelector('#player-score');
+const playerScore = document.createElement('h2');
+playerScore.classList.add('player-score')
+score.appendChild(playerScore)
+let score2 = document.querySelector('#computer-score');
+const computerScore = document.createElement('h2');
+computerScore.classList.add('computer-score');
+score2.appendChild(computerScore);
+const gameWinner = document.querySelector('#game-winner');
+const finalWinner = document.createElement('h4');
+finalWinner.classList.add('final-winner');
+gameWinner.appendChild(finalWinner)
+
+
 
 
 
