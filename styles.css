@@ -9,6 +9,10 @@ body {
 
 }
 
+#play {
+    cursor: pointer;
+}
+
 #player-container,
 #computer-container {
     width: 344px;
