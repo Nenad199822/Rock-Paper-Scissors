@@ -9,15 +9,17 @@ let playerSelection
 let numberOfRounds = 0;
 let playerWins = 0;
 let computerWins = 0;
-const buttons = document.querySelectorAll('button')
-console.log(buttons[0])
+const buttons = document.getElementsByClassName('player-button');
 Array.from(buttons).forEach(button => {
     button.addEventListener('click', (e) => {
         playerSelection = button.id;
         console.log(playerSelection);
-        console.log(playRound(playerSelection, getComputerChoice()));
+        //console.log(playRound(playerSelection, getComputerChoice()));
     });
 });
+document.getElementById('play').addEventListener('click', (e) => {
+    game()
+})
 
 function playRound(playerSelection, computerSelection) {
 
@@ -33,24 +35,20 @@ function playRound(playerSelection, computerSelection) {
         return (`You lose ${computerSelection} beat ${playerSelection}`);
     }
 }
-// function game() {
-//     // let numberOfRounds = 0;
-//     let playerWins = 0;
-//     let computerWins = 0;
-//     while (numberOfRounds < 5) {
-//         const playerSelection = playerChoice();
-//         const computerSelection = getComputerChoice();
-//         const roundResult = playRound(playerSelection, computerSelection);
-//         if (roundResult.includes('win')) {
-//             playerWins++
-//         } else if (roundResult.includes('lose')) {
-//             computerWins++
-//         }
-//         console.log(roundResult)
-//         numberOfRounds++;
-//     }
-//     console.log(`Final Score - Player: ${playerWins}, Computer: ${computerWins}`);
-// }
-// game();
-// Create three buttons, one for each selection. Add an event listener to the buttons that call your playRound function with the correct playerSelection every
-// time a button is clicked. (you can keep the console.logs for this step)
+function game() {
+    const computerSelection = getComputerChoice();
+    const roundResult = playRound(playerSelection, computerSelection);
+    if (roundResult.includes('win')) {
+        playerWins++
+    } else if (roundResult.includes('lose')) {
+        computerWins++
+    }
+    console.log(roundResult)
+    numberOfRounds++;
+    if (playerWins === 5 || computerWins === 5) {
+        console.log(`Final Score - Player: ${playerWins}, Computer: ${computerWins}`);
+    }
+}
+
+
+
