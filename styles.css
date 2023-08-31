@@ -1,7 +1,7 @@
 body {
     display: flex;
     flex-direction: column;
-    background: radial-gradient(circle, rgba(224, 115, 115, 0.6) 23%, rgba(227, 141, 21, 0.6) 85%);
+    background: radial-gradient(circle, rgba(3, 160, 50, 0.6) 50%, rgba(231, 238, 129, 0.726) 85%);
 
 }
 
@@ -32,4 +32,9 @@ h1 {
     background: linear-gradient(to right, #f3365f 20%, #19a8eb 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+}
+
+#play {
+    color: blue;
+    font-size: initial;
 }

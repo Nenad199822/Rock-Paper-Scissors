@@ -3,11 +3,21 @@ function getComputerChoice() {
     let randomElement = Math.floor(Math.random() * randomChoice.length);
     return randomChoice[randomElement];
 }
-function playerChoice() {
-    let userChoice = prompt("What do you choose: Rock , Paper , Scissors");
-    let choiceToLower = userChoice.toLowerCase();
-    return choiceToLower[0].toUpperCase() + choiceToLower.slice(1);
-}
+// Create three buttons, one for each selection. Add an event listener to the buttons that call your playRound function with the correct playerSelection every
+// time a button is clicked. (you can keep the console.logs for this step)
+let playerSelection
+let numberOfRounds = 0;
+let playerWins = 0;
+let computerWins = 0;
+const buttons = document.querySelectorAll('button')
+console.log(buttons[0])
+Array.from(buttons).forEach(button => {
+    button.addEventListener('click', (e) => {
+        playerSelection = button.id;
+        console.log(playerSelection);
+        console.log(playRound(playerSelection, getComputerChoice()));
+    });
+});
 
 function playRound(playerSelection, computerSelection) {
 
@@ -24,7 +34,7 @@ function playRound(playerSelection, computerSelection) {
     }
 }
 // function game() {
-//     let numberOfRounds = 0;
+//     // let numberOfRounds = 0;
 //     let playerWins = 0;
 //     let computerWins = 0;
 //     while (numberOfRounds < 5) {
@@ -42,3 +52,5 @@ function playRound(playerSelection, computerSelection) {
 //     console.log(`Final Score - Player: ${playerWins}, Computer: ${computerWins}`);
 // }
 // game();
+// Create three buttons, one for each selection. Add an event listener to the buttons that call your playRound function with the correct playerSelection every
+// time a button is clicked. (you can keep the console.logs for this step)
